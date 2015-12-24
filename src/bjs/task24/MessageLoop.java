@@ -22,7 +22,6 @@ public class MessageLoop implements Runnable{
         thread = new Thread(this);
         messagesArray = new String[messagesNum];
 
-
         for (int i = 0; i < messagesArray.length; i++) {
             StringBuilder message = new StringBuilder(messagesNum);
 
@@ -64,10 +63,11 @@ public class MessageLoop implements Runnable{
      * @param threadName Name of the current thread
      */
     public void start(String threadName) {
-        if (!threadName.isEmpty())
-            thread.setName(threadName);
-
         thread.start();
+
+        //setName works only for started treads
+        if (!threadName.isEmpty())
+           thread.setName(threadName);
     }
 
     /**

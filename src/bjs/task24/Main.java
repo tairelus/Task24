@@ -2,7 +2,6 @@ package bjs.task24;
 
 public class Main {
     public static void main(String[] args) {
-
         MessageLoop messageLoop = new MessageLoop(3, 4000);
         System.out.println("Start " + MessageLoop.class.getSimpleName() + " thread");
 
